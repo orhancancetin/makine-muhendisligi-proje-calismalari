@@ -3,17 +3,62 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6; /* Hafif Gri Arka Plan */
+    background-color: #f4f7f6;
     color: #333;
     line-height: 1.6;
 }
 
+/* --- DİL DEĞİŞTİRME MANTIĞI --- */
+
+/* Varsayılan olarak İngilizce içerikleri gizle */
+.en {
+    display: none;
+}
+
+/* Eğer body'de 'language-en' sınıfı varsa: */
+/* Türkçeyi gizle */
+body.language-en .tr {
+    display: none;
+}
+/* İngilizceyi göster */
+body.language-en .en {
+    display: block;
+}
+
+/* Dil Butonu Stili */
+.lang-switch-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#lang-toggle {
+    background-color: white;
+    color: #007bff;
+    border: 2px solid white;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+#lang-toggle:hover {
+    background-color: #e6f0ff;
+    transform: scale(1.05);
+}
+
+/* ----------------------------- */
+
 header {
-    background-color: #007bff; /* Mavi Başlık */
+    background-color: #007bff;
     color: white;
     padding: 40px 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Buton konumlandırması için */
 }
 
 header h1 {
@@ -27,7 +72,7 @@ main {
     padding: 0 20px;
 }
 
-/* Proje Bölümü Stili */
+/* Proje Kutuları */
 .project {
     background-color: #ffffff;
     padding: 30px;
@@ -44,11 +89,11 @@ main {
     margin-bottom: 20px;
 }
 
-/* İçerik Düzeni (Resim ve Metin Yan Yana) */
+/* Resim ve Yazı Düzeni */
 .content-wrapper {
     display: flex;
     gap: 30px;
-    align-items: flex-start; /* İçeriğin yukarıdan başlamasını sağlar */
+    align-items: flex-start;
 }
 
 .text-content {
@@ -58,7 +103,7 @@ main {
 .image-content {
     flex: 1;
     text-align: center;
-    max-width: 50%; /* Maksimum genişlik */
+    max-width: 50%;
 }
 
 .image-content img {
@@ -70,12 +115,13 @@ main {
 }
 
 .image-content figcaption {
-    font-size: 0.85em;
+    font-size: 0.9em;
     color: #666;
-    margin-top: 5px;
+    margin-top: 8px;
+    font-style: italic;
 }
 
-/* Listeler ve Diğer Detaylar */
+/* Listeler ve Çizgiler */
 ul {
     padding-left: 20px;
     list-style: disc;
@@ -97,12 +143,16 @@ footer {
     margin-top: 50px;
 }
 
-/* Küçük Ekranlar İçin Duyarlı Tasarım */
+/* Mobil Uyumluluk */
 @media (max-width: 768px) {
     .content-wrapper {
-        flex-direction: column; /* Küçük ekranlarda alt alta diz */
+        flex-direction: column;
     }
     .image-content {
         max-width: 100%;
+    }
+    .lang-switch-container {
+        top: 10px;
+        right: 10px;
     }
 }

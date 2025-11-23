@@ -9,48 +9,87 @@
 </head>
 <body>
 
+    <div class="lang-switch-container">
+        <button id="lang-toggle" onclick="toggleLanguage()">EN</button>
+    </div>
+
     <header>
-        <h1>⚙️ Mühendislik Projeleri Portfolyosu</h1>
-        <p>Termo-Mekanik Analizler, Burulma Davranışı ve Geometrik Hesaplamalar</p>
+        <div class="tr">
+            <h1>⚙️ Mühendislik Projeleri Portfolyosu</h1>
+            <p>Termo-Mekanik Analizler, Burulma Davranışı ve Geometrik Hesaplamalar</p>
+        </div>
+        <div class="en">
+            <h1>⚙️ Engineering Projects Portfolio</h1>
+            <p>Thermo-Mechanical Analyses, Torsional Behavior, and Geometric Calculations</p>
+        </div>
     </header>
 
     <main>
         
-    <section class="project">
-            <h2>1. Kademeli Mil Termo-Mekanik Analizi</h2>
+        <section class="project">
+            <h2 class="tr">1. Kademeli Mil Termo-Mekanik Analizi</h2>
+            <h2 class="en">1. Thermo-Mechanical Analysis of a Stepped Shaft</h2>
+            
             <div class="content-wrapper">
                 <div class="text-content">
-                    <p>Bu çalışmada, kademeli bir milin termo-mekanik yükler altındaki dayanımı <strong>Ansys Mechanical</strong> kullanılarak 3D statik yapısal analiz ile incelenmiştir. Analiz sürecinde, milin özellikle çap geçiş bölgelerinde oluşabilecek <strong>gerilme yığılmaları</strong> mercek altına alınmıştır.</p>
-                    <p>Analiz hassasiyetini garanti altına almak amacıyla, gerilme yığılmasının öngörüldüğü kademe geçişlerinde <strong>mesh yapısı bilinçli olarak sıklaştırılmıştır</strong>. Analiz sonuçları, bu bölgelerdeki gerilme artışını doğrulayarak kurulan mesh yapısının ve öngörünün tutarlılığını kanıtlamıştır.</p>
-                    <ul>
-                        <li><strong>Maksimum Gerilme:</strong> Analiz sonucunda milde oluşan maksimum von-Mises gerilmesi <strong>44.4 MPa</strong> olarak hesaplanmıştır.</li>
-                        <li><strong>Güvenlik Analizi:</strong> Bu gerilme değeri malzemenin akma sınırının oldukça altındadır. Elde edilen <strong>5.6 emniyet katsayısı</strong>, öngörülen güvenlik değerinin üzerindedir.</li>
-                        <li><strong>Sonuç:</strong> Tasarımın işletme yükleri altında tamamen güvenli olduğu ve herhangi bir <strong>plastik deformasyon riski taşımadığı</strong> kanıtlanmıştır.</li>
-                    </ul>
+                    <div class="tr">
+                        <p>Bu çalışmada, kademeli bir milin termo-mekanik yükler altındaki dayanımı <strong>Ansys Mechanical</strong> kullanılarak 3D statik yapısal analiz ile incelenmiştir. Analiz sürecinde, milin özellikle çap geçiş bölgelerinde oluşabilecek <strong>gerilme yığılmaları</strong> mercek altına alınmıştır.</p>
+                        <p>Analiz hassasiyetini garanti altına almak amacıyla, gerilme yığılmasının öngörüldüğü kademe geçişlerinde <strong>mesh yapısı bilinçli olarak sıklaştırılmıştır</strong>. Analiz sonuçları, bu bölgelerdeki gerilme artışını doğrulayarak kurulan mesh yapısının ve öngörünün tutarlılığını kanıtlamıştır.</p>
+                        <ul>
+                            <li><strong>Maksimum Gerilme:</strong> Analiz sonucunda milde oluşan maksimum von-Mises gerilmesi <strong>44.4 MPa</strong> olarak hesaplanmıştır.</li>
+                            <li><strong>Güvenlik Analizi:</strong> Bu gerilme değeri malzemenin akma sınırının oldukça altındadır. Elde edilen <strong>5.6 emniyet katsayısı</strong>, öngörülen güvenlik değerinin üzerindedir.</li>
+                            <li><strong>Sonuç:</strong> Tasarımın işletme yükleri altında tamamen güvenli olduğu ve herhangi bir <strong>plastik deformasyon riski taşımadığı</strong> kanıtlanmıştır.</li>
+                        </ul>
+                    </div>
+
+                    <div class="en">
+                        <p>In this study, the strength of a stepped shaft under thermo-mechanical loads was analyzed using <strong>Ansys Mechanical</strong> via 3D static structural analysis. The analysis focused specifically on potential <strong>stress concentrations</strong> at the diameter transition zones of the shaft.</p>
+                        <p>To ensure analysis precision, the <strong>mesh structure was intentionally refined</strong> at the step transitions where stress concentration was predicted. The results confirmed the stress increase in these regions, validating the consistency of the mesh structure and the initial prediction.</p>
+                        <ul>
+                            <li><strong>Maximum Stress:</strong> The maximum von-Mises stress on the shaft was calculated as <strong>44.4 MPa</strong>.</li>
+                            <li><strong>Safety Analysis:</strong> This stress value is well below the yield strength of the material. The obtained <strong>safety factor of 5.6</strong> is above the predicted safety value.</li>
+                            <li><strong>Result:</strong> It is proven that the design is completely safe under operating loads and carries no risk of <strong>plastic deformation</strong>.</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="image-content">
-                    <img src="images/kademeli_mil_deformasyon.jpeg" alt="Kademeli Mil Toplam Deformasyon Analizi">
-                    <figcaption>Gerilme yığılmalarının incelendiği kademeli milin deformasyon analizi.</figcaption>
+                    <img src="images/kademeli_mil_deformasyon.jpeg" alt="Kademeli Mil Analizi">
+                    <figcaption class="tr">Gerilme yığılmalarının incelendiği kademeli milin deformasyon analizi.</figcaption>
+                    <figcaption class="en">Deformation analysis of the stepped shaft examining stress concentrations.</figcaption>
                 </div>
             </div>
         </section>
         
         <hr>
 
-    <section class="project">
-            <h2>2. Burulmaya Maruz Mil Analizi</h2>
+        <section class="project">
+            <h2 class="tr">2. Burulmaya Maruz Mil Analizi</h2>
+            <h2 class="en">2. Torsional Deformation Analysis of a Power Transmission Shaft</h2>
+
             <div class="content-wrapper">
                 <div class="image-content">
-                    <img src="images/burulma_deformasyon.jpeg" alt="Burulmaya Maruz Mil Analizi">
-                    <figcaption>Yüksek moment altında milin kesitlerindeki deformasyon dağılımı.</figcaption>
+                    <img src="images/burulma_deformasyon.jpeg" alt="Burulma Analizi">
+                    <figcaption class="tr">Yüksek moment altında milin kesitlerindeki deformasyon dağılımı.</figcaption>
+                    <figcaption class="en">Deformation distribution across the shaft sections under high torque.</figcaption>
                 </div>
                 <div class="text-content">
-                    <p>Bu çalışmada, yüksek moment altında çalışan bir güç aktarım milinin burulma davranışı incelenmiştir. Yaklaşık <strong>65 kNm’lik</strong> moment yükü altında gerçekleştirilen analizde, sonuçların doğruluğunu artırmak amacıyla model üzerinde <strong>Hexahedral mesh</strong> yapısı kullanılmıştır.</p>
-                    <ul>
-                        <li><strong>Teğetsel Yer Değiştirme:</strong> Analiz sonucunda, milin serbest ucunda <strong>4.33 mm’lik</strong> teğetsel bir yer değiştirme gözlemlenmiştir. Deformasyonun mil ekseni boyunca lineer artışı, teorik burulma mekaniği ile tam bir örtüşme göstermektedir.</li>
-                        <li><strong>Burulma Açısı:</strong> Kritik bir parametre olan burulma açısı <strong>4.96°</strong> olarak hesaplanmıştır. Bu değer, milin <strong>elastik sınırlar içinde</strong> kalarak momenti ilettiğini; ancak belirli bir esnekliğe sahip olduğunu göstermektedir.</li>
-                        <li><strong>Tasarım Önemi:</strong> Elde edilen bu açı verisi, milin bağlı olduğu diğer makine elemanları için <strong>açısal hizalama toleranslarının</strong> belirlenmesinde kritik bir tasarım parametresi olarak kullanılmaktadır.</li>
-                    </ul>
+                    <div class="tr">
+                        <p>Bu çalışmada, yüksek moment altında çalışan bir güç aktarım milinin burulma davranışı incelenmiştir. Yaklaşık <strong>65 kNm’lik</strong> moment yükü altında gerçekleştirilen analizde, sonuçların doğruluğunu artırmak amacıyla model üzerinde <strong>Hexahedral mesh</strong> yapısı kullanılmıştır.</p>
+                        <ul>
+                            <li><strong>Teğetsel Yer Değiştirme:</strong> Analiz sonucunda, milin serbest ucunda <strong>4.33 mm’lik</strong> teğetsel bir yer değiştirme gözlemlenmiştir. Deformasyonun mil ekseni boyunca lineer artışı, teorik burulma mekaniği ile tam bir örtüşme göstermektedir.</li>
+                            <li><strong>Burulma Açısı:</strong> Kritik bir parametre olan burulma açısı <strong>4.96°</strong> olarak hesaplanmıştır. Bu değer, milin <strong>elastik sınırlar içinde</strong> kalarak momenti ilettiğini; ancak belirli bir esnekliğe sahip olduğunu göstermektedir.</li>
+                            <li><strong>Tasarım Önemi:</strong> Elde edilen bu açı verisi, milin bağlı olduğu diğer makine elemanları için <strong>açısal hizalama toleranslarının</strong> belirlenmesinde kritik bir tasarım parametresi olarak kullanılmaktadır.</li>
+                        </ul>
+                    </div>
+
+                    <div class="en">
+                        <p>In this study, the torsional behavior of a power transmission shaft operating under high torque was examined. In the analysis performed under approximately <strong>65 kNm</strong> of torque load, a <strong>Hexahedral mesh</strong> structure was used to increase the accuracy of the results.</p>
+                        <ul>
+                            <li><strong>Tangential Displacement:</strong> A tangential displacement of <strong>4.33 mm</strong> was observed at the free end of the shaft. The linear increase in deformation along the shaft axis shows a complete overlap with theoretical torsion mechanics.</li>
+                            <li><strong>Angle of Twist:</strong> The angle of twist, a critical parameter, was calculated as <strong>4.96°</strong>. This value indicates that the shaft transmits the torque while remaining within <strong>elastic limits</strong>, yet possesses a certain degree of flexibility.</li>
+                            <li><strong>Design Importance:</strong> This angular data is used as a critical design parameter in determining <strong>angular alignment tolerances</strong> for other machine elements connected to the shaft.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -58,20 +97,35 @@
         <hr>
 
         <section class="project">
-            <h2>3. Karışık Geometri Ağırlık Merkezi Hesaplama</h2>
+            <h2 class="tr">3. Karışık Geometri Ağırlık Merkezi Hesaplama</h2>
+            <h2 class="en">3. Computational Centroid Calculation using MATLAB</h2>
+
             <div class="content-wrapper">
                 <div class="text-content">
-                    <p>Dikdörtgen, çeyrek daire ve üçgen gibi farklı geometrik şekillerden oluşan kompozit ve karmaşık bir cismin <strong>Ağırlık Merkezini (Kütle Merkezi)</strong> hesaplayan bir algoritma <strong>Matlab</strong> ortamında geliştirilmiştir.</p>
-                    <p>Geliştirilen <code>soru_bir()</code> fonksiyonu, kullanıcıdan dinamik olarak bölüm sayısını alır. Her bir parça için (örneğin çıkarılan delikler için negatif alan hesabı yaparak) koordinat ve alan verilerini matrislerde depolar ve ağırlık merkezi formülünü tüm sisteme uygular.</p>
-                    <ul>
-                        <li><strong>Matlab Algoritması:</strong> Kod, kullanıcıdan aldığı verileri işleyerek konsola detaylı bir tablo (Xc, Yc, Ac, Momentler) basar.</li>
-                        <li><strong>Hesaplama Sonucu:</strong> Yapılan örnek vaka çalışmasında, negatif alanların (boşlukların) da hesaba katılmasıyla sistemin ağırlık merkezi hassas bir şekilde <strong>(14.80, 108.73)</strong> koordinatlarında tespit edilmiştir.</li>
-                        <li><strong>Amaç:</strong> Bu yaklaşım, karmaşık makine parçalarının denge noktalarının sayısal yöntemlerle hızlı ve hatasız bulunmasını sağlar.</li>
-                    </ul>
+                    <div class="tr">
+                        <p>Dikdörtgen, çeyrek daire ve üçgen gibi farklı geometrik şekillerden oluşan kompozit ve karmaşık bir cismin <strong>Ağırlık Merkezini (Kütle Merkezi)</strong> hesaplayan bir algoritma <strong>Matlab</strong> ortamında geliştirilmiştir.</p>
+                        <p>Geliştirilen <code>soru_bir()</code> fonksiyonu, kullanıcıdan dinamik olarak bölüm sayısını alır. Her bir parça için (örneğin çıkarılan delikler için negatif alan hesabı yaparak) koordinat ve alan verilerini matrislerde depolar ve ağırlık merkezi formülünü tüm sisteme uygular.</p>
+                        <ul>
+                            <li><strong>Matlab Algoritması:</strong> Kod, kullanıcıdan aldığı verileri işleyerek konsola detaylı bir tablo (Xc, Yc, Ac, Momentler) basar.</li>
+                            <li><strong>Hesaplama Sonucu:</strong> Yapılan örnek vaka çalışmasında, negatif alanların (boşlukların) da hesaba katılmasıyla sistemin ağırlık merkezi hassas bir şekilde <strong>(14.80, 108.73)</strong> koordinatlarında tespit edilmiştir.</li>
+                            <li><strong>Amaç:</strong> Bu yaklaşım, karmaşık makine parçalarının denge noktalarının sayısal yöntemlerle hızlı ve hatasız bulunmasını sağlar.</li>
+                        </ul>
+                    </div>
+
+                    <div class="en">
+                        <p>An algorithm calculating the <strong>Center of Gravity (Centroid)</strong> of a composite and complex body consisting of different geometric shapes such as rectangles, quarter circles, and triangles was developed in the <strong>MATLAB</strong> environment.</p>
+                        <p>The developed <code>soru_bir()</code> function dynamically takes the number of sections from the user. It stores coordinate and area data in matrices for each part (e.g., calculating negative areas for removed holes) and applies the centroid formula to the entire system.</p>
+                        <ul>
+                            <li><strong>Matlab Algorithm:</strong> The code processes the user input and prints a detailed table (Xc, Yc, Ac, Moments) to the console.</li>
+                            <li><strong>Calculation Result:</strong> In the case study, the centroid of the system was precisely determined at coordinates <strong>(14.80, 108.73)</strong>, taking into account negative areas (voids).</li>
+                            <li><strong>Purpose:</strong> This approach enables the rapid and error-free determination of balance points for complex machine parts using numerical methods.</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="image-content">
-                    <img src="images/agirlik_merkezi_matlab.png" alt="Matlab Ağırlık Merkezi Hesaplama Kodu">
-                    <figcaption>Matlab kodu ile oluşturulan veri tablosu ve hesaplanan ağırlık merkezi koordinatları.</figcaption>
+                    <img src="images/agirlik_merkezi_matlab.png" alt="Matlab Code">
+                    <figcaption class="tr">Matlab kodu ile oluşturulan veri tablosu ve hesaplanan ağırlık merkezi koordinatları.</figcaption>
+                    <figcaption class="en">Data table generated by Matlab code and calculated centroid coordinates.</figcaption>
                 </div>
             </div>
         </section>
@@ -79,25 +133,45 @@
         <hr>
 
         <section class="project">
-            <h2>4. Hızlı Karıştırıcı Boru İmalat Yöntemleri ve Teknik Resmi</h2>
+            <h2 class="tr">4. Hızlı Karıştırıcı Boru İmalat Yöntemleri ve Teknik Resmi</h2>
+            <h2 class="en">4. Reverse Engineering and Technical Design of a Mixer Pipe</h2>
+
             <div class="content-wrapper">
                 <div class="image-content">
-                    <img src="images/karistirici_boru_teknik.png" alt="Hızlı Karıştırıcı Boru Teknik Resmi">
-                    <figcaption>Proje kapsamında Autocad kullanılarak oluşturulan teknik resim.</figcaption>
+                    <img src="images/karistirici_boru_teknik.png" alt="Teknik Resim">
+                    <figcaption class="tr">Proje kapsamında Autocad kullanılarak oluşturulan teknik resim.</figcaption>
+                    <figcaption class="en">Technical drawing created using Autocad within the scope of the project.</figcaption>
                 </div>
                 <div class="text-content">
-                    <p><strong>Proje Kapsamı:</strong> Bir üretim tesisine yapılan teknik ziyaret sırasında, aktif olarak kullanılan bir makine parçası incelenmiş; parçanın imalat yöntemleri yerinde analiz edilerek teknik resmi <strong>AutoCAD</strong> ortamında çizilmiştir. Proje konusu olarak seçilen bu parça "Hızlı Karıştırıcı Boru"dur.</p>
-                    <p><strong>İşlev ve Kapasite:</strong> Bu parça, <strong>1000 KG/saat</strong> kapasiteli kompakt kısa kesim makarna üretim hatlarında kritik bir göreve sahiptir. İrmik ve suyun ön karıştırma işlemi sırasında akışı yönlendirerek <strong>homojen bir karışım</strong> oluşumuna doğrudan katkı sağlamaktadır.</p>
-                    <ul>
-                        <li><strong>Malzeme Bilgisi:</strong> Gıda tüzüğüne uygunluk ve dayanıklılık gereksinimleri nedeniyle parça <strong>Paslanmaz Çelik</strong> malzemeden imal edilmiştir.</li>
-                        <li><strong>İmalat Yöntemleri:</strong> Parçanın geometrik formu ve üretim süreci incelendiğinde, aşağıdaki talaşlı imalat yöntemleri ile üretildiği belirlenmiştir:
-                            <ul>
-                                <li><strong>Matkap:</strong> Delik delme işlemleri.</li>
-                                <li><strong>Tornalama:</strong> Silindirik yüzeylerin işlenmesi.</li>
-                                <li><strong>Frezeleme:</strong> Yüzey ve kanal açma işlemleri.</li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <div class="tr">
+                        <p><strong>Proje Kapsamı:</strong> Bir üretim tesisine yapılan teknik ziyaret sırasında, aktif olarak kullanılan bir makine parçası incelenmiş; parçanın imalat yöntemleri yerinde analiz edilerek teknik resmi <strong>AutoCAD</strong> ortamında çizilmiştir. Proje konusu olarak seçilen bu parça "Hızlı Karıştırıcı Boru"dur.</p>
+                        <p><strong>İşlev ve Kapasite:</strong> Bu parça, <strong>1000 KG/saat</strong> kapasiteli kompakt kısa kesim makarna üretim hatlarında kritik bir göreve sahiptir. İrmik ve suyun ön karıştırma işlemi sırasında akışı yönlendirerek <strong>homojen bir karışım</strong> oluşumuna doğrudan katkı sağlamaktadır.</p>
+                        <ul>
+                            <li><strong>Malzeme Bilgisi:</strong> Gıda tüzüğüne uygunluk ve dayanıklılık gereksinimleri nedeniyle parça <strong>Paslanmaz Çelik</strong> malzemeden imal edilmiştir.</li>
+                            <li><strong>İmalat Yöntemleri:</strong> Parçanın geometrik formu ve üretim süreci incelendiğinde, aşağıdaki talaşlı imalat yöntemleri ile üretildiği belirlenmiştir:
+                                <ul>
+                                    <li><strong>Matkap:</strong> Delik delme işlemleri.</li>
+                                    <li><strong>Tornalama:</strong> Silindirik yüzeylerin işlenmesi.</li>
+                                    <li><strong>Frezeleme:</strong> Yüzey ve kanal açma işlemleri.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="en">
+                        <p><strong>Project Scope:</strong> During a technical visit to a production facility, an actively used machine part was examined; its manufacturing methods were analyzed on-site, and its technical drawing was created in <strong>AutoCAD</strong>. The part selected for the project is the "High-Speed Mixer Pipe".</p>
+                        <p><strong>Function and Capacity:</strong> This part plays a critical role in compact short-cut pasta production lines with a capacity of <strong>1000 KG/hour</strong>. It guides the flow during the pre-mixing process of semolina and water, directly contributing to the formation of a <strong>homogeneous mixture</strong>.</p>
+                        <ul>
+                            <li><strong>Material Info:</strong> The part is manufactured from <strong>Stainless Steel</strong> due to food safety regulations and durability requirements.</li>
+                            <li><strong>Manufacturing Methods:</strong> Upon examining the geometric form and production process, it was determined that the part is produced using the following machining methods:
+                                <ul>
+                                    <li><strong>Drilling:</strong> Hole making operations.</li>
+                                    <li><strong>Turning:</strong> Machining of cylindrical surfaces.</li>
+                                    <li><strong>Milling:</strong> Surface and channel machining operations.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -105,8 +179,26 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Mühendislik Portfolyosu | GitHub Pages üzerinde yayınlanmıştır.</p>
+        <p class="tr">&copy; 2025 Mühendislik Portfolyosu | GitHub Pages üzerinde yayınlanmıştır.</p>
+        <p class="en">&copy; 2025 Engineering Portfolio | Published on GitHub Pages.</p>
     </footer>
+
+    <script>
+        function toggleLanguage() {
+            const body = document.body;
+            const btn = document.getElementById('lang-toggle');
+            
+            // Dil sınıfını değiştir
+            body.classList.toggle('language-en');
+
+            // Buton metnini güncelle
+            if (body.classList.contains('language-en')) {
+                btn.innerText = 'TR'; // Şu an İngilizce, Türkçe'ye dönmek için TR göster
+            } else {
+                btn.innerText = 'EN'; // Şu an Türkçe, İngilizce'ye dönmek için EN göster
+            }
+        }
+    </script>
     
 </body>
 </html>
