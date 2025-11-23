@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mühendislik Projeleri Portfolyosu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1>⚙️ Mühendislik Projeleri Portfolyosu</h1>
+        <p>Termo-Mekanik Analizler, Burulma Davranışı ve Geometrik Hesaplamalar</p>
+    </header>
+
+    <main>
+        
+        <section class="project">
+            <h2>1. Kademeli Mil Termo-Mekanik Analizi</h2>
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <p>Bu çalışmada, kademeli bir milin termo-mekanik yükler altında (Yer çekimi, Isıl yük ve Yanal kuvvet) dayanımı Ansys Mechanical kullanılarak 3D statik yapısal analiz ile incelenmiştir.</p>
+                    <p>Analiz, özellikle milin çap geçiş bölgelerindeki <strong>gerilme yığılmalarına</strong> odaklanmıştır. Bu öngörüyü doğrulamak için mesh yapısı kademe geçişlerinde sıklaştırılmıştır.</p>
+                    <ul>
+                        <li><strong>Maksimum Gerilme:</strong> Maksimum von-Mises gerilmesi <strong>44.4 MPa</strong> olarak hesaplanmıştır.</li>
+                        <li><strong>Güvenlik:</strong> Malzemenin akma sınırının oldukça altında kalınmış ve <strong>5.6</strong> değerinde yüksek bir emniyet katsayısı elde edilmiştir. Bu, tasarımın işletme yükleri altında güvenli olduğunu ve plastik deformasyon riski taşımadığını kanıtlamaktadır.</li>
+                        <li><strong>Deformasyon:</strong> Milin maruz kaldığı sehim miktarları gözlemlenmiştir.</li>
+                    </ul>
+                </div>
+                <div class="image-content">
+                    <img src="images/kademeli_mil_deformasyon.png" alt="Kademeli Mil Toplam Deformasyon Analizi (Ansys Görsel 5)">
+                    <figcaption>Uygulanan kuvvet ve termal yüklere karşı milin maruz kaldığı sehim miktarları.</figcaption>
+                </div>
+            </div>
+        </section>
+        
+        <hr>
+
+        <section class="project">
+            <h2>2. Burulmaya Maruz Mil Analizi</h2>
+            <div class="content-wrapper">
+                <div class="image-content">
+                    <img src="images/burulma_deformasyon.png" alt="Burulmaya Maruz Mil Toplam Deformasyon Analizi (Ansys Görsel 3)">
+                    <figcaption>Toplam deformasyon miktarlarının milin kesitlerine göre dağılımı.</figcaption>
+                </div>
+                <div class="text-content">
+                    <p>Bu analizde, ankastre bir güç aktarım milinin yaklaşık <strong>65 kNm'lik</strong> moment yükü altındaki burulma davranışı incelenmiştir.</p>
+                    <ul>
+                        <li><strong>Burulma Açısı:</strong> En önemli parametrelerden biri olan burulma açısı <strong>4.96°</strong> olarak hesaplanmıştır. Bu değer, milin elastik sınırlar içinde kaldığını ve momenti başarıyla ilettiğini gösterir.</li>
+                        <li><strong>Yer Değiştirme:</strong> Milin serbest ucu teğetsel olarak <strong>4.33 mm</strong> yer değiştirmiştir.</li>
+                        <li><strong>Teorik Uygunluk:</strong> Deformasyonun mil ekseni boyunca lineer artışı, teorik burulma mekaniği ile tam olarak örtüşmektedir.</li>
+                        <li><strong>Tasarım Önemi:</strong> Burulma açısı, milin bağlı olduğu diğer makine elemanları için açısal hizalama toleranslarında kritik bir tasarım parametresidir.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="project">
+            <h2>3. Karışık Geometri Ağırlık Merkezi Hesaplama</h2>
+            <div class="content-wrapper">
+                <div class="text-content">
+                    <p>Karışık geometriye sahip bir cismin <strong>Ağırlık Merkezi (Kütle Merkezi)</strong>, <strong>Matlab</strong> üzerinden programlanarak hesaplanmıştır.</p>
+                    <p>Hesaplamaya başlamadan önce cisim, dikdörtgen ve çeyrek daire gibi basit bölümlere ayrılmış; bu bölümlerin koordinat ve alan değerleri kullanıcıdan alınmıştır.</p>
+                    <p>Ağırlık Merkezi koordinatları (X, Y) için kullanılan temel formül (Xc*Ac ve Yc*Ac toplamlarının toplam alana bölünmesi) Matlab kodu ile uygulanmıştır.</p>
+                    <ul>
+                        <li><strong>Sonuç:</strong> Yapılan hesaplama sonucunda Ağırlık Merkezi Koordinatları <strong>(14.80, 108.73)</strong> olarak bulunmuştur.</li>
+                        <li><strong>Kodlama Amacı:</strong> Kodun temel işlevi, kullanıcıdan alınan verileri bir tabloya dönüştürmek ve ardından toplam alan ile çarpımların toplamını kullanarak ağırlık merkezini bulmaktır.</li>
+                    </ul>
+                </div>
+                <div class="image-content">
+                    <img src="images/agirlik_merkezi_matlab.png" alt="Matlab Ağırlık Merkezi Hesaplama Kodu ve Çıktısı">
+                    <figcaption>Ağırlık merkezi hesaplaması için geliştirilen Matlab fonksiyonu.</figcaption>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="project">
+            <h2>4. Hızlı Karıştırıcı Boru İmalat Yöntemleri ve Teknik Resmi</h2>
+            <div class="content-wrapper">
+                <div class="image-content">
+                    <img src="images/karistirici_boru_teknik.png" alt="Hızlı Karıştırıcı Boru Teknik Resmi">
+                    <figcaption>Parçanın Autocad kullanılarak çizilen teknik resmi.</figcaption>
+                </div>
+                <div class="text-content">
+                    <p><strong>Tanım:</strong> Hızlı Karıştırıcı Boru, 1000 KG/saat kapasiteli kompakt kısa kesim makarna üretim hatlarında irmik ve suyun ön karıştırma işlemi sırasında akışı yönlendiren ve homojen karışım oluşumuna katkı sağlayan kritik bir parçadır.</p>
+                    <ul>
+                        <li><strong>Malzeme:</strong> Parça <strong>Paslanmaz Çelikten</strong> imal edilmektedir.</li>
+                        <li><strong>Tasarım:</strong> Parçanın teknik resmi <strong>Autocad</strong> kullanılarak hazırlanmıştır.</li>
+                        <li><strong>İmalat Yöntemleri:</strong> Parçanın karmaşık geometrisinin üretimi için <strong>Tornalama</strong>, <strong>Frezeleme</strong> ve <strong>Matkap</strong> gibi talaşlı imalat yöntemleri kullanılmaktadır.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mühendislik Portfolyosu | GitHub Pages üzerinde yayınlanmıştır.</p>
+    </footer>
+    
+</body>
+</html>
